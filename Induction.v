@@ -70,5 +70,26 @@ Compute ltb 5 5.
 Theorem eqb_refl : forall n : nat,
  (n =? n) = true.
 Proof.
-  
+  intros.
+  induction n.
+  - reflexivity.
+  - simpl. rewrite IHn. reflexivity.
+  Qed.
+
+Theorem even_S : forall n : nat,
+  even (S n) = negb (even n).
+Proof.
+  intros. induction n.
+  - simpl. reflexivity.
+  - rewrite IHn. simpl. rewrite negb_involutive. reflexivity. 
+  Qed.
+
+Theorem mult_0_plus' : forall n m : nat,
+  (n + 0 + 0) * m = n * m.
+Proof.
+  intros n m.
+  assert (H: n + 0 + 0 = n).
+   { rewrite add_comm. simpl. rewrite add_comm. reflexivity. }
+   rewrite -> H.
+   reflexivity. Qed.
 
