@@ -1,0 +1,55 @@
+# Coq compiled files
+*.vo
+*.vok
+*.vos
+*.glob
+*.aux
+.*.aux
+*.vio
+*.d
+
+# Coq dependency files
+.*.d
+.coqdeps.d
+.coq-native/
+
+# OCaml files (from extraction)
+*.cmi
+*.cmo
+*.cmx
+*.cma
+*.cmxa
+*.cmxs
+*.o
+*.a
+*.so
+
+# CoqIDE/Proof General files
+.coq-native/
+.csdp.cache
+*.v.d
+*.v#
+.lia.cache
+.nia.cache
+
+# Build system
+_build/
+Makefile.coq
+Makefile.coq.conf
+.Makefile.coq.d
+CoqMakefile.conf
+
+# Editor files
+*~
+\#*\#
+.\#*
+.*.swp
+.vscode/
+.idea/
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# opam local files
+_opam/
